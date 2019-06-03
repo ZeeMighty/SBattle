@@ -3,7 +3,8 @@ from django.db import models
 class event(models.Model):
     title = models.CharField(max_length = 100)
     body = models.TextField()
-    date = models.DateField()
+    result = models.TextField()
+#    date = models.DateField()
 #    heroes = models.CharField(max_length = 200)
 
 def _str_(self):
@@ -19,3 +20,7 @@ class heroe(models.Model):
 
 def _str_(self):
     return self.name
+
+class date(models.Model):
+    date = models.DateField()
+    date_id = models.ForeignKey(event, on_delete=models.CASCADE, null=True)

@@ -16,13 +16,14 @@ SECRET_KEY = 'x^98tr!6ltq4#!5_ud*@$!dx(cc4rib=kg-mf%+3lyg^unxb8w'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+AUTH_USER_MODEL = 'HiPage.User'
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'mains',
+    'HiPage',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -112,3 +113,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

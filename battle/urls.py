@@ -19,5 +19,5 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url('^', include('mains.urls')),
+    url('^', include('HiPage.urls')),
 ]

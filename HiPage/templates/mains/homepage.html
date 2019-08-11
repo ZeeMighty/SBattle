@@ -1,0 +1,24 @@
+{% extends "HiPage/wrapper.html" %}
+
+{% block content %}
+
+{% for event in events_title %}
+
+<a href = "/{{event.id}}" class = "article"><h3 class = "header">{{ event.title }}</h3></a>
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
